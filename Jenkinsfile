@@ -12,6 +12,7 @@ pipeline {
         stage('uTester Scan - Github') {
           steps {
             utesterstartscan(scanSettingsId: 'd7984f4f-2804-41f8-9db0-c56fbe12c141', project: 'Tom', baseAddress: 'https://github.com')
+            sleep 20
           }
         }
 
