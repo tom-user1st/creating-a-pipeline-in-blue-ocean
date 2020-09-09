@@ -11,7 +11,7 @@ pipeline {
 
         stage('uTester Scan - Github') {
           steps {
-            utesterstartscan(scanSettingsId: 'd7984f4f-2804-41f8-9db0-c56fbe12c141', project: 'Tom', baseAddress: 'https://github.com')
+            utesterstartscan baseAddress: 'https://www.user1st.com', errorsHigh: '', errorsLow: '', errorsMedium: '', errorsSuggestions: '', project: 'Tom', scanSettingsId: 'd7984f4f-2804-41f8-9db0-c56fbe12c141'
             sleep 20
           }
         }
@@ -21,7 +21,7 @@ pipeline {
 
     stage('uTester Scan') {
       steps {
-        utesterstartscan(project: 'Tom', scanSettingsId: 'd7984f4f-2804-41f8-9db0-c56fbe12c141', baseAddress: 'https://www.user1st.com')
+        utesterstartscan baseAddress: 'https://www.user1st.com', errorsHigh: '', errorsLow: '', errorsMedium: '', errorsSuggestions: '', project: 'Tom', scanSettingsId: 'd7984f4f-2804-41f8-9db0-c56fbe12c141'
         sleep 20
       }
     }
